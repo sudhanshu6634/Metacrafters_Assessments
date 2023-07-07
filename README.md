@@ -1,22 +1,32 @@
-MetaCrafters Assignments
-This repository contains my completed assignments for the MetaCrafters course. Each assignment is organized in its own folder, with the necessary code files and any additional resources.
-
-Table of Contents
-Assessment 1: JS-PROOF
-Assessment 2: - ETH PROOF - Beginner Level
-Assessment 3: - ETH PROOF - Intermediate Level
-Assessment 4: - POLY PROOF - Advanced Level
-Getting Started
-To get started with the assignments, follow these steps:
-
-Clone this repository: git clone https://github.com/your-username/metacrafters-assignments.git.
-Navigate to the specific assignment folder: cd assignmentX (replace X with the assignment number).
-Read the assignment description and requirements in the README file within each assignment folder.
-Complete the assignment by writing the necessary code and making any required changes.
-Test your code and ensure it meets the assignment requirements.
-Commit and push your changes to your GitHub repository.
-Contributing
-Contributions to this repository are not accepted as it is for personal assignments. However, if you have suggestions or feedback, feel free to open an issue.
+ErrorHandling Contract
+This is a Solidity smart contract that demonstrates different error handling techniques using assert, revert, and require functions.
 
 License
-This project is licensed under the MIT License. You are free to modify and distribute the code for personal and educational purposes.
+This contract is using the MIT License.
+
+Prerequisites
+Solidity ^0.8.17
+Contract Details
+The ErrorHandling contract provides the following functions:
+
+testAssert(uint num)
+This function demonstrates the usage of the assert function.
+It takes a num parameter and checks if it is not equal to zero using the assert statement.
+If the condition fails, it triggers an "Internal error" and aborts the execution.
+divide(uint _numerator, uint _denominator)
+This function demonstrates the usage of the revert function.
+It takes _numerator and _denominator parameters and performs division.
+If the _numerator is less than _denominator, it reverts the transaction with a custom error message stating that the numerator should be greater than the denominator.
+If the condition is met, it returns the result of the division.
+mult(uint a)
+This function demonstrates the usage of the require function.
+It takes an a parameter and performs multiplication with a predefined constant b.
+It first checks if a is greater than zero using the require statement.
+If the condition fails, it reverts the transaction with a custom error message stating that the value of a should not be zero.
+If the condition is met, it returns the result of the multiplication.
+Usage
+Make sure you have Solidity ^0.8.17 installed.
+Compile and deploy the ErrorHandling contract to a supported Ethereum network.
+Interact with the deployed contract by calling the available functions and providing the required parameters.
+Video Walkthrough
+https://www.loom.com/share/b872cb1015ae478ba9f3870a1fd490e9?sid=4f6282bc-0185-45fd-821b-c0528cfe6e59
